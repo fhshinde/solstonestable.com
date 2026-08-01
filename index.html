@@ -1,52 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon — Sol Stone Stable</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      width: 100%;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background-color: #2c3e50;
-      background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      font-family: 'Playfair Display', Georgia, serif;
-    }
-
-    h1 {
-      color: #ffffff;
-      font-size: clamp(2rem, 6vw, 4.5rem);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.25),
-        0 1px 3px rgba(0, 0, 0, 0.15);
-      text-align: center;
-      padding: 0 1rem;
-      line-height: 1.2;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SolstoneStable — helping established businesses modernise | Singapore</title>
+<meta name="description" content="We help traditional businesses bring their bookings, customers, rosters and numbers up to date. Plain English, fixed prices, free first chat.">
+<meta property="og:title" content="Your business works. We make it work easier.">
+<meta property="og:description" content="We help traditional businesses bring their bookings, customers, rosters and numbers up to date. Plain English, fixed prices, free first chat.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://solstonestable.com/">
+<link rel="canonical" href="https://solstonestable.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","ProfessionalService"],"name":"SolstoneStable","url":"https://solstonestable.com/","description":"We help traditional businesses bring their bookings, customers, rosters and numbers up to date. Plain English, fixed prices, free first chat.","email":"hello@solstonestable.com","identifier":"UEN 202608050E","areaServed":["Singapore"]}</script>
+<style>
+body{margin:0;background:#F5F1EA url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.11 0 0 0 0 0.10 0 0 0 0 0.09 0 0 0 0.045 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");color:#1C1B1A;font-family:Inter,system-ui,sans-serif;font-size:17.5px;-webkit-font-smoothing:antialiased}
+a{color:#1C1B1A;text-decoration-color:#C9962E;text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:#5B6770}
+a:focus-visible,button:focus-visible{outline:3px solid #E8A13D;outline-offset:3px}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.btn{display:inline-block;background:#E8A13D;color:#1C1B1A;text-decoration:none;font-weight:600;border-radius:3px;border:0;cursor:pointer;font-family:Inter,system-ui,sans-serif;transition:background .18s ease}
+.btn:hover{background:#f0b055;color:#1C1B1A}
+.card{border:1px solid #cfc6b6;background:rgba(255,253,249,.6);padding:26px;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(28,27,26,.08)}
+.pcard{border:1px solid #3a3835;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px;transition:transform .18s ease}
+.pcard:hover{transform:translateY(-3px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:20px}
+.eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:clamp(20px,3vw,28px)}
+.eyebrow span:first-child{font-family:'Source Serif 4',serif;font-size:15px;font-weight:600;color:#C9962E;letter-spacing:.12em}
+.rule{flex:0 0 56px;height:1px;background:#C9962E}
+.wrap{max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,110px) clamp(20px,5vw,48px)}
+h2{font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4vw,48px);line-height:1.15;margin:0}
+.lede{font-size:clamp(17px,1.6vw,18.5px);line-height:1.8;max-width:62ch;margin:24px 0 0}
+.sub{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5B6770;padding-bottom:12px;border-bottom:1px solid #cfc6b6}
+.card h4{font-family:'Source Serif 4',serif;font-weight:600;font-size:20px;margin:16px 0 14px}
+.card p{font-size:15.5px;line-height:1.7;margin:0}
+.card p+p{margin:12px 0 0}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:15px;font-weight:600;color:#F5F1EA}
+.field input,.field textarea{font-family:Inter,system-ui,sans-serif;font-size:17px;padding:13px 14px;border:1px solid #5B6770;border-radius:3px;background:#F5F1EA;color:#1C1B1A}
+.field textarea{line-height:1.6;resize:vertical}
+</style>
 </head>
 <body>
-  <h1>Coming Soon</h1>
+<div style="min-height:100vh">
+
+<section style="background:#1C1B1A;color:#F5F1EA;position:relative;overflow:hidden">
+<header style="max-width:1120px;margin:0 auto;padding:clamp(20px,3vw,32px) clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px">
+<a href="#top" style="text-decoration:none" aria-label="SolstoneStable home"><span style="font-family:'Source Serif 4',serif;font-size:23px;letter-spacing:.01em;background:linear-gradient(100deg,#C9962E 20%,#E3B85C 80%);-webkit-background-clip:text;background-clip:text;color:transparent"><span style="font-weight:600">Solstone</span><span style="font-style:italic;font-weight:400">Stable</span></span></a>
+<a href="#book" class="btn" data-cta="header" style="font-size:15px;padding:10px 18px">Book a free chat</a>
+</header>
+<div id="top" style="max-width:1120px;margin:0 auto;padding:clamp(44px,9vw,130px) clamp(20px,5vw,48px) clamp(90px,12vw,160px)">
+<h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(38px,6.4vw,76px);line-height:1.08;margin:0;max-width:15ch;color:#F5F1EA;text-wrap:pretty">Your business works. We make it work easier.</h1>
+<p style="font-size:clamp(17px,1.7vw,19.5px);line-height:1.75;max-width:56ch;margin:clamp(22px,3vw,30px) 0 0;color:#d9d3c9">SolstoneStable helps established businesses bring their day-to-day running up to date — the bookings, the paperwork, the customers, the numbers — so the place runs steadily even when you're not standing over it. Plain English. Fixed prices. No tech background needed.</p>
+<div style="margin-top:clamp(30px,4vw,44px)"><a href="#book" class="btn" data-cta="hero" style="font-size:17px;padding:16px 30px">Book a free chat</a></div>
+</div>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:clamp(36px,5vw,56px);height:1px;background:linear-gradient(90deg,rgba(201,150,46,0) 0%,#C9962E 18%,#E3B85C 50%,#C9962E 82%,rgba(201,150,46,0) 100%)"></div>
+</section>
+
+<section style="border-bottom:1px solid #ddd5c8">
+<div class="wrap" data-fade>
+<div class="eyebrow"><span>01</span><span aria-hidden="true" class="rule"></span></div>
+<h2>Sound familiar?</h2>
+<p style="font-size:clamp(17px,1.6vw,18.5px);line-height:1.85;max-width:60ch;margin:24px 0 0">You built something real. But the busywork keeps growing. Customers slip through the cracks, the roster lives on a whiteboard, and you find out how the month went weeks after it ended. You don't need to become a tech company. You need someone to sort out the running of the place — properly, once — so it holds steady without you doing more.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap" data-fade style="padding-bottom:clamp(40px,5vw,64px)">
+<div class="eyebrow"><span>02</span><span aria-hidden="true" class="rule"></span></div>
+<h2 style="max-width:22ch;text-wrap:pretty">Start with the Baseline. Stay steady with the Stable.</h2>
+<p class="lede">First, the <strong>Baseline</strong>: we spend two to three weeks inside your business — talking to you and your team, watching how the work actually flows — then hand you a simple plan: the changes that will save you the most time and win you the most customers, in the order to do them, with honest costs. If you want, we set them up for you and teach your team.</p>
+<p class="lede" style="margin-top:18px">Then, if you'd like us around for the long run, join the <strong>Stable</strong>: a monthly plan where we keep everything running, fix what breaks, answer your questions, and keep improving one thing at a time. Optional. Cancel any month. Most owners start with just the Baseline.</p>
+</div>
+<div style="background:#1C1B1A;color:#F5F1EA">
+<div class="wrap" data-fade style="padding-top:clamp(44px,6vw,72px);padding-bottom:clamp(44px,6vw,72px)">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(18px,2.5vw,28px)">
+<div class="pcard">
+<h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;margin:0;color:#E3B85C">The Baseline.</h3>
+<p style="font-family:'Source Serif 4',serif;font-size:clamp(24px,2.6vw,32px);font-weight:600;line-height:1.25;margin:0;color:#F5F1EA">S$5,800</p>
+<p style="font-size:16px;line-height:1.7;margin:0">One-time, fixed, agreed before we start.</p>
+<p style="font-size:15.5px;line-height:1.75;margin:0;color:#b8b2a8">Two to three weeks inside your business, then a simple plan: what to fix, in what order, at what cost — set up for you if you want it.</p>
+</div>
+<div class="pcard">
+<h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:24px;margin:0;color:#E3B85C">The Stable.</h3>
+<p style="font-family:'Source Serif 4',serif;font-size:clamp(24px,2.6vw,32px);font-weight:600;line-height:1.25;margin:0;color:#F5F1EA">S$380 <span style="font-weight:400;font-size:.6em;color:#9aa3aa">per month</span></p>
+<p style="font-size:16px;line-height:1.7;margin:0">Optional, cancel anytime.</p>
+<p style="font-size:15.5px;line-height:1.75;margin:0;color:#b8b2a8">A monthly check-in call, fixes and updates when anything stops working, priority answers when you're stuck, and one steady improvement each month.</p>
+</div>
+</div>
+<p style="font-size:16.5px;line-height:1.7;margin:22px 0 0;color:#d9d3c9">No lock-in contracts. No surprise invoices. If we're not useful, you'll know within a month — and you can leave.</p>
+</div>
+</div>
+<div class="wrap" data-fade style="padding-top:clamp(40px,5vw,64px);padding-bottom:clamp(56px,8vw,96px)">
+<ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(20px,3vw,32px)">
+<li style="border-top:2px solid #1C1B1A;padding-top:20px"><span style="font-family:'Source Serif 4',serif;font-size:15px;font-weight:600;color:#C9962E">Step 1</span><h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;margin:10px 0 8px">Book a free chat.</h3><p style="font-size:16.5px;line-height:1.7;margin:0">Thirty minutes on the phone or over coffee. You talk, we listen.</p></li>
+<li style="border-top:2px solid #1C1B1A;padding-top:20px"><span style="font-family:'Source Serif 4',serif;font-size:15px;font-weight:600;color:#C9962E">Step 2</span><h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;margin:10px 0 8px">We do the Baseline.</h3><p style="font-size:16.5px;line-height:1.7;margin:0">Two to three weeks. We find where the hours and customers are leaking.</p></li>
+<li style="border-top:2px solid #1C1B1A;padding-top:20px"><span style="font-family:'Source Serif 4',serif;font-size:15px;font-weight:600;color:#C9962E">Step 3</span><h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;margin:10px 0 8px">Run it your way.</h3><p style="font-size:16.5px;line-height:1.7;margin:0">Take the plan and do it yourself, have us set it up, or join the Stable and we'll keep it running with you.</p></li>
+</ol>
+<div style="margin-top:32px"><a href="#book" class="btn" data-cta="offer" style="font-size:16px;padding:13px 24px">Book a free chat</a></div>
+</div>
+</section>
+
+<section style="border-top:1px solid #ddd5c8">
+<div class="wrap" data-fade>
+<div class="eyebrow"><span>03</span><span aria-hidden="true" class="rule"></span></div>
+<h2>Six things we fix all the time</h2>
+<p style="font-style:italic;font-size:16.5px;line-height:1.7;color:#5B6770;max-width:60ch;margin:16px 0 0">These are typical examples of the kind of changes we set up — every business is different, and we'll tell you straight which ones apply to yours.</p>
+
+<h3 class="sub" style="margin:clamp(32px,5vw,48px) 0 0">Inside the business</h3>
+<div class="grid">
+<div class="card">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="#5B6770" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="2"/><line x1="8" y1="19" x2="40" y2="19"/><line x1="19" y1="19" x2="19" y2="40"/><line x1="29" y1="19" x2="29" y2="40"/><path d="M22 27l2.5 2.5 4.5-4.5" stroke="#C9962E"/></svg>
+<h4>Rosters, timesheets and payroll.</h4>
+<p><span style="font-weight:600;color:#5B6770">Before:</span> the whiteboard, paper timesheets, and Sunday nights doing payroll maths.</p>
+<p><span style="font-weight:600;color:#8a6d1f">After:</span> staff clock in on their phones, the system tallies the hours and rates itself, and payroll is ready in minutes — checked by you, not calculated by you.</p>
+</div>
+<div class="card">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="#5B6770" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16l14-7 14 7v16l-14 7-14-7z"/><path d="M10 16l14 7 14-7"/><line x1="24" y1="23" x2="24" y2="39"/><circle cx="38" cy="12" r="5" stroke="#C9962E"/><line x1="38" y1="9.5" x2="38" y2="13" stroke="#C9962E"/><circle cx="38" cy="15" r="0.5" stroke="#C9962E"/></svg>
+<h4>Running out of stock.</h4>
+<p><span style="font-weight:600;color:#5B6770">Before:</span> reordering by eye and finding the gap when a customer asks.</p>
+<p><span style="font-weight:600;color:#8a6d1f">After:</span> the software learns your sales patterns, flags what's running low before it runs out, and drafts the supplier order for you to approve with one tap.</p>
+</div>
+<div class="card">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="#5B6770" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="40" x2="39" y2="40"/><rect x="12" y="28" width="6" height="12"/><rect x="21" y="22" width="6" height="18"/><rect x="30" y="14" width="6" height="26" stroke="#C9962E"/></svg>
+<h4>Knowing your numbers.</h4>
+<p><span style="font-weight:600;color:#5B6770">Before:</span> finding out how the month went at tax time.</p>
+<p><span style="font-weight:600;color:#8a6d1f">After:</span> a Monday-morning snapshot on your phone — sales, cash, who owes you what — with a short plain-English summary, written by AI, of what changed last week and why.</p>
+</div>
+</div>
+
+<h3 class="sub" style="margin:clamp(32px,4vw,44px) 0 0">For your customers</h3>
+<div class="grid">
+<div class="card">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="#5B6770" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H20l-8 7v-7h-2a2 2 0 0 1-2-2z"/><line x1="16" y1="20" x2="32" y2="20"/><line x1="16" y1="26" x2="26" y2="26" stroke="#C9962E"/></svg>
+<h4>Enquiries at all hours.</h4>
+<p><span style="font-weight:600;color:#5B6770">Before:</span> calls missed while you're with a customer, messages answered days later — or never.</p>
+<p><span style="font-weight:600;color:#8a6d1f">After:</span> an AI assistant replies in seconds, any hour — prices, opening times, availability — takes booking details, and hands the tricky questions to you. Your customers get an answer; you get your hands back.</p>
+</div>
+<div class="card">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="#5B6770" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="10" width="32" height="28" rx="2"/><line x1="8" y1="18" x2="40" y2="18"/><line x1="16" y1="6" x2="16" y2="12"/><line x1="32" y1="6" x2="32" y2="12"/><circle cx="31" cy="28" r="5" stroke="#C9962E"/><line x1="31" y1="26" x2="31" y2="28.5" stroke="#C9962E"/><line x1="31" y1="28.5" x2="33" y2="30" stroke="#C9962E"/></svg>
+<h4>No-shows.</h4>
+<p><span style="font-weight:600;color:#5B6770">Before:</span> booked appointments quietly not turning up, and the slot wasted.</p>
+<p><span style="font-weight:600;color:#8a6d1f">After:</span> automatic reminders the day before with one-tap confirm or rebook. The system does the chasing so you never have to.</p>
+</div>
+<div class="card">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="#5B6770" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M38 24a14 14 0 1 1-4.1-9.9"/><path d="M38 8v7h-7" stroke="#C9962E"/><circle cx="24" cy="22" r="4"/><path d="M17 32c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5"/></svg>
+<h4>Customers who never come back.</h4>
+<p><span style="font-weight:600;color:#5B6770">Before:</span> a great first visit, then silence — you're too busy to follow up.</p>
+<p><span style="font-weight:600;color:#8a6d1f">After:</span> the system remembers every customer and sends the right message at the right moment — a thank-you, a service-due reminder, a request for a review — so regulars actually become regulars.</p>
+</div>
+</div>
+
+<p class="lede" style="margin-top:clamp(28px,4vw,40px)">What owners are usually after — and what we design for: hours back every week, customers who return, staff who need less chasing, and numbers you can actually see. We won't promise figures before we've looked at your business. Anyone who does is guessing.</p>
+</div>
+</section>
+
+<section style="border-top:1px solid #ddd5c8">
+<div class="wrap" data-fade>
+<div class="eyebrow"><span>04</span><span aria-hidden="true" class="rule"></span></div>
+<h2 style="max-width:22ch;text-wrap:pretty">Built by operators, not career consultants.</h2>
+<p class="lede">We're a small team who spent our careers running operations, technology and growth inside large global companies. We started SolstoneStable to bring that experience to businesses like yours — without the big-firm price tag or the jargon. You deal with us directly, start to finish.</p>
+<div style="margin-top:clamp(28px,4vw,40px);max-width:420px">
+<p style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;margin:0">Konark Shinde</p>
+<p style="font-size:14.5px;line-height:1.65;margin:6px 0 0">Has spent his career in solutions consulting at global technology companies — helping businesses choose the right tools and set them up properly. Explains things without the jargon.</p>
+<p style="font-size:13.5px;margin:10px 0 0"><a href="https://sg.linkedin.com/in/konark-shinde" target="_blank" rel="noopener">LinkedIn</a></p>
+</div>
+</div>
+</section>
+
+<section id="book" style="background:#1C1B1A;color:#F5F1EA;scroll-margin-top:24px">
+<div class="wrap">
+<div class="eyebrow" style="margin-bottom:clamp(24px,3vw,32px)"><span>05</span><span aria-hidden="true" class="rule"></span></div>
+<p style="font-family:'Source Serif 4',serif;font-size:clamp(26px,3vw,34px);margin:0;background:linear-gradient(100deg,#C9962E 20%,#E3B85C 80%);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block"><span style="font-weight:600">Solstone</span><span style="font-style:italic;font-weight:400">Stable</span></p>
+<h2 style="font-size:clamp(28px,3.6vw,44px);line-height:1.25;margin:18px 0 0;max-width:26ch;text-wrap:pretty">The first chat is free, it's thirty minutes, and you'll leave with at least one useful idea whether you hire us or not.</h2>
+<form id="contact-form" style="margin-top:clamp(32px,4vw,44px);max-width:560px;display:flex;flex-direction:column;gap:18px">
+<div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="c-contact">Phone or email — whichever suits you</label><input id="c-contact" name="contact" type="text" autocomplete="tel" required></div>
+<div class="field"><label for="c-msg">What's eating your time? A line or two is plenty.</label><textarea id="c-msg" name="message" rows="4"></textarea></div>
+<button type="submit" class="btn" style="align-self:flex-start;font-size:17px;padding:15px 28px">Book a free chat</button>
+<p id="contact-status" role="status" style="font-size:16px;line-height:1.7;color:#E3B85C;margin:0;display:none">Your email app should have opened with the message ready to send. If it didn't, write to <a href="mailto:hello@solstonestable.com" style="color:#E3B85C">hello@solstonestable.com</a> and we'll reply within one working day.</p>
+<p style="font-size:15px;line-height:1.7;color:#9aa3aa;margin:0">Prefer email? <a href="mailto:hello@solstonestable.com?subject=Booking%20a%20free%20chat" style="color:#d9d3c9">hello@solstonestable.com</a></p>
+</form>
+</div>
+</section>
+
+<footer style="background:#1C1B1A;color:#9aa3aa;border-top:1px solid #33312f">
+<div style="max-width:1120px;margin:0 auto;padding:24px clamp(20px,5vw,48px);display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;align-items:center">
+<span style="font-family:'Source Serif 4',serif;font-size:15px;background:linear-gradient(100deg,#C9962E 20%,#E3B85C 80%);-webkit-background-clip:text;background-clip:text;color:transparent"><span style="font-weight:600">Solstone</span><span style="font-style:italic">Stable</span></span>
+<span>Working with businesses in Singapore</span>
+<span>UEN 202608050E</span>
+<a href="mailto:hello@solstonestable.com" style="color:#9aa3aa">hello@solstonestable.com</a>
+<span>© 2026</span>
+</div>
+</footer>
+</div>
+
+<script>
+(function () {
+  function track(event, label) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: event, cta_location: label, ts: Date.now() });
+  }
+
+  document.querySelectorAll('[data-cta]').forEach(function (el) {
+    el.addEventListener('click', function () { track('cta_click', el.dataset.cta); });
+  });
+
+  var form = document.getElementById('contact-form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    track('contact_submit', 'inline_form');
+    var name = document.getElementById('c-name').value.trim();
+    var contact = document.getElementById('c-contact').value.trim();
+    var message = document.getElementById('c-msg').value.trim();
+    var body = 'Name: ' + name + '\n' +
+               'Phone or email: ' + contact + '\n\n' +
+               (message || '(no message)');
+    document.getElementById('contact-status').style.display = 'block';
+    window.location.href = 'mailto:hello@solstonestable.com' +
+      '?subject=' + encodeURIComponent('Booking a free chat — ' + name) +
+      '&body=' + encodeURIComponent(body);
+  });
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'none';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-fade]').forEach(function (el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      io.observe(el);
+    });
+  }
+})();
+</script>
 </body>
 </html>
