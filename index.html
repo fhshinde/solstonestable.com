@@ -262,8 +262,9 @@ h2{font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4vw,4
 <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
 <div class="field"><label for="c-contact">Phone or email — whichever suits you</label><input id="c-contact" name="contact" type="text" autocomplete="tel" required></div>
 <div class="field"><label for="c-msg">What's eating your time? A line or two is plenty.</label><textarea id="c-msg" name="message" rows="4"></textarea></div>
-<button type="submit" class="btn" style="align-self:flex-start;font-size:17px;padding:15px 28px">Book a free chat</button>
-<p id="contact-status" role="status" style="font-size:16px;line-height:1.7;color:#F1C7BF;margin:0;display:none">Your email app should have opened with the message ready to send. If it didn't, write to <a href="mailto:hello@solstonestable.com">hello@solstonestable.com</a> and we'll reply within one working day.</p>
+<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="c-website">Leave this field empty</label><input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<button id="contact-submit" type="submit" class="btn" style="align-self:flex-start;font-size:17px;padding:15px 28px">Book a free chat</button>
+<p id="contact-status" role="status" aria-live="polite" style="font-size:16px;line-height:1.7;color:#F1C7BF;margin:0;display:none"></p>
 <p style="font-size:15px;line-height:1.7;color:var(--ground-soft);margin:0">Prefer email? <a href="mailto:hello@solstonestable.com?subject=Booking%20a%20free%20chat">hello@solstonestable.com</a></p>
 </form>
 </div>
@@ -291,20 +292,63 @@ h2{font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4vw,4
     el.addEventListener('click', function () { track('cta_click', el.dataset.cta); });
   });
 
+  // Posts to the "contactus" Google Form; responses are emailed on to
+  // hello@solstonestable.com by the form's own notification setting.
+  //
+  // Two quirks of that form, both of which reject the response outright if
+  // ignored (and the rejection is invisible here — see the no-cors note below):
+  //   - every question is required, so a blank message is sent as a placeholder
+  //   - "collect email addresses" is on, adding a required emailAddress field.
+  //     This form asks for "phone or email", so anything that isn't an address
+  //     is sent as a placeholder; the real contact always goes in its own answer.
+  var GOOGLE_FORM_ID = '1FAIpQLSdmaM2Nm0sfuUqZbPH6qtsGlSvFfezAitGoJ1pnowja-yeZVw';
+  var FIELD = {
+    name: 'entry.389681120',
+    contact: 'entry.2082039074',
+    message: 'entry.1551130074'
+  };
+
   var form = document.getElementById('contact-form');
+  var statusEl = document.getElementById('contact-status');
+  var submitBtn = document.getElementById('contact-submit');
+
+  function setStatus(text, ok) {
+    statusEl.textContent = text;
+    statusEl.style.color = ok ? '#F1C7BF' : '#F4B8AE';
+    statusEl.style.display = 'block';
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    track('contact_submit', 'inline_form');
-    var name = document.getElementById('c-name').value.trim();
+    if (document.getElementById('c-website').value) return;  // honeypot
+
     var contact = document.getElementById('c-contact').value.trim();
-    var message = document.getElementById('c-msg').value.trim();
-    var body = 'Name: ' + name + '\n' +
-               'Phone or email: ' + contact + '\n\n' +
-               (message || '(no message)');
-    document.getElementById('contact-status').style.display = 'block';
-    window.location.href = 'mailto:hello@solstonestable.com' +
-      '?subject=' + encodeURIComponent('Booking a free chat — ' + name) +
-      '&body=' + encodeURIComponent(body);
+    var isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+
+    var body = new URLSearchParams();
+    body.append('emailAddress', isEmail ? contact : 'no-email-given@solstonestable.com');
+    body.append(FIELD.name, document.getElementById('c-name').value.trim());
+    body.append(FIELD.contact, contact);
+    body.append(FIELD.message, document.getElementById('c-msg').value.trim() || '(no message)');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    setStatus('Sending…', true);
+
+    fetch('https://docs.google.com/forms/d/e/' + GOOGLE_FORM_ID + '/formResponse', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: body
+    }).then(function () {
+      track('contact_submit', 'inline_form');
+      form.reset();
+      submitBtn.style.display = 'none';
+      setStatus("Thanks — we've got it. We'll be in touch within one working day.", true);
+    }).catch(function () {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Book a free chat';
+      setStatus("Sorry — that didn't send. Please email hello@solstonestable.com and we'll reply within one working day.", false);
+    });
   });
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
